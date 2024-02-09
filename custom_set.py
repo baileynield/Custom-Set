@@ -10,12 +10,15 @@ class CustomSet():
     def remove(self, single_item: str):
         if single_item in self.items:
             self.items.remove(single_item)
+ 
+        else:
+            raise KeyError("Item not removed, moving forward")
 
     def as_list(self) -> list:
         return self.items
 
     def clear(self):
-        pass
+        self.items.clear()
 
 def main():
 
@@ -23,7 +26,8 @@ def main():
     my_set.add("item 1")
     my_set.add("item 2")
     my_set.add("item 1")
-    my_set.remove("item 2")
+    my_set.add("item 3")
+    my_set.remove("item 3")
     print(my_set.as_list())
 
 
