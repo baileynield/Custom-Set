@@ -4,17 +4,16 @@ class CustomSet():
         self.items = []
 
     def add(self, single_item: str):
-        self.single_item = single_item
         if single_item not in self.items: 
             self.items.append(single_item)
         
     def remove(self, single_item: str):
-        self.single_item = single_item
         if single_item in self.items:
-            self.items.remove(single_item
-)
+            self.items.remove(single_item)
+
     def as_list(self) -> list:
         return self.items
+
     def clear(self):
         pass
 
