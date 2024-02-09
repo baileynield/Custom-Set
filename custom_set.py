@@ -5,7 +5,9 @@ class CustomSet():
 
     def add(self, single_item: str):
         self.single_item = single_item
-        self.items.append(single_item)
+        if single_item not in self.items: 
+            self.items.append(single_item)
+        
     def remove(self, single_item: str):
         pass
     def as_list(self) -> list:
